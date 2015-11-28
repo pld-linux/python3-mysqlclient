@@ -65,28 +65,24 @@ MySQLdb to pythonowy interfejs do MySQL-a.
 
 %build
 %if %{with python2}
-CC="%{__cc}" \
-CFLAGS="%{rpmcflags}" \
-%{__python} setup.py build --build-base build-2 %{?with_tests:test}
+%py_build %{?with_tests:test}
 %endif
 
 %if %{with python3}
-CC="%{__cc}" \
-CFLAGS="%{rpmcflags}" \
-%{__python3} setup.py build --build-base build-3 %{?with_tests:test}
+%py3_build %{?with_tests:test}
 %endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %if %{with python2}
-%{__python} setup.py install \
+%py_install \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 %endif
 
 %if %{with python3}
-%{__python3} setup.py install \
+%py3_install \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 %endif
