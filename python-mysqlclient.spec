@@ -13,6 +13,7 @@ Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/m/mysqlclient/mysqlclient-%{version}.tar.gz
 # Source0-md5:	58d7c9c617a4286a88db290e7857d3aa
 URL:		https://pypi.python.org/pypi/mysqlclient
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
