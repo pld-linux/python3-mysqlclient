@@ -7,7 +7,7 @@ Summary:	A Python interface to MySQL (MySQLdb compatible)
 Summary(pl.UTF-8):	Interfejs Pythona do MySQL (kompatybilny z MySQLdb)
 Name:		python-%{module}
 Version:	1.3.6
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/m/mysqlclient/mysqlclient-%{version}.tar.gz
